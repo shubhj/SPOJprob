@@ -1,0 +1,28 @@
+#include<cstdio>
+#include<algorithm>
+using namespace std;
+int main()
+{
+long long int k,sum,j,a[100001],b[100001];
+scanf("%lld",&k);
+while(k!=0)
+{
+for(long long int i=0;i<k;i++)
+scanf("%lld",&a[i]);
+for(long long int i=0;i<k;i++)
+scanf("%lld",&b[i]);
+sort(a,a+k);
+sort(b,b+k);
+sum=0;
+j=k-1;
+for(long long int i=0;i<k;i++)
+{
+sum+=a[i]*b[j];
+j--;
+}
+printf("%lld\n",sum);
+scanf("%lld",&k);
+}
+return 0;
+}
+
